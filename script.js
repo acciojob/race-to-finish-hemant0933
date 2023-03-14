@@ -35,7 +35,7 @@ let promise5 = new promise((resolve,reject)=>{
 })
 
 
-Promise.race(promises).then((value) => {
+Promise.any(promises).then((value) => {
   console.log(value);
 }
 });
