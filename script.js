@@ -1,4 +1,4 @@
-window.promises = [];
+window.promises = [promise1, promise2,promise3,promise4,promise5];
 var output = document.getElementById('output');
 // Do not change the code above this
 // add your promises to the array `promises`
@@ -35,7 +35,7 @@ let promise5 = new promise((resolve,reject)=>{
 })
 
 
-Promise.race([promise1, promise2,promise3,promise4,promise5]).then((value) => {
+Promise.race(promises).then((value) => {
   console.log(value);
-  // Both resolve, but promise2 is faster
+}
 });
