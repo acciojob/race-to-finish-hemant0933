@@ -1,4 +1,4 @@
-// window.promises = [promise1(), promise2(),promise3(),promise4(),promise5()];
+window.promises = [];
 // var output = document.getElementById('output');
 // // Do not change the code above this
 // // add your promises to the array `promises`
@@ -38,7 +38,7 @@
 // Promise.any(promises).then((value) => {
 //   console.log(value);
 // }
-const promises = [];
+// const promises = [];
 
 for (let i = 0; i < 5; i++) {
   promises.push(new Promise((resolve) => {
