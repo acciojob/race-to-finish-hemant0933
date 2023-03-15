@@ -53,9 +53,14 @@ Promise.any(promises)
   .then((result) => {
     const outputDiv = document.getElementById('output');
     outputDiv.textContent = result;
+
+    // Check the result of the resolved promise
+    const promiseIndex = promises.findIndex((promise) => promise[Symbol.for('PromiseState')] === 'fulfilled');
+    console.log(`Promise ${promiseIndex + 1} was the first to resolve with the result: ${result}`);
   })
   .catch((error) => {
     console.error(error);
   });
+
 
 // });
